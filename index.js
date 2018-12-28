@@ -51,13 +51,13 @@ function initForm() {
    return(recipe);
  }
  
-  function handlebarsSetup() {
-   Handlebars.registerHelper('displayIngredient', function(ingredient) {
+function handlebarsSetup() {
+  
+  Handlebars.registerHelper('displayIngredient', function(ingredient) {
      return new Handlebars.SafeString('<li name="ingredients">' + ingredient + '</li>');
-   });
-   // Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
-   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
-   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
+  });
+  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
+  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
  }
  
 function init() {
