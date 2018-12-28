@@ -7,7 +7,9 @@ function init() {
    });
  }	 
 
-document.getElementsByTagName("main")[0].innerHTML = template({'true': 'handleSubmit()'});
+ document.addEventListener("DOMContentLoaded", function(event) {
+   init()	   init()
+ })	 })
 
 function handleSubmit() {
   let recipe = buildRecipe();
