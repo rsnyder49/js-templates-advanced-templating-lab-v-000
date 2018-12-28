@@ -56,11 +56,6 @@ function setupHelpersPartials() {
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
 }
 
-function init() {
-  setupHelpersPartials();
-  initForm();
-}	 
-
 document.addEventListener("DOMContentLoaded", function(event) {
  init();
 });
