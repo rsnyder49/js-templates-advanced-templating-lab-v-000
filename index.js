@@ -39,7 +39,7 @@ function buildRecipe() {
  
   for (let i = 0; i < ingredientNodes.length; i++) {
     if (ingredNodes[i].value !== "") {
-       ingredients.push(ingredNodes[i].value);
+       ingredients.push(ingredientNodes[i].value);
     }
   }
   let recipe = { name, ingredients, description };
