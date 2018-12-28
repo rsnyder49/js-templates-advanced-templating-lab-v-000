@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 function handleSubmit() {
-  let recipe         = buildRecipe();
+  let recipe = buildRecipe();
   let recipeTemplate = document.getElementById("recipe-template").innerHTML;
-  let template       = Handlebars.compile(recipeTemplate);
+  let template = Handlebars.compile(recipeTemplate);
  
   document.getElementById("main").innerHTML = template(recipe);
 }
