@@ -7,9 +7,9 @@ function init() {
    });
  }	 
 
- document.addEventListener("DOMContentLoaded", function(event) {
-   init()	   init()
- })	 })
+document.addEventListener("DOMContentLoaded", function(event) {
+   init();	 
+ });
 
 function handleSubmit() {
   let recipe = buildRecipe();
