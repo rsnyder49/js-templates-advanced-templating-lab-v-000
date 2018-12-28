@@ -1,9 +1,9 @@
 function initForm() {
   let formTemplate = document.getElementById("recipe-form-template").innerHTML;
-  let template     = Handlebars.compile(formTemplate);
+  let template = Handlebars.compile(formTemplate);
 }
+
 document.getElementsByTagName("main")[0].innerHTML = template({'true': 'handleSubmit()'});
- }
 
 function handleSubmit() {
   let recipe = buildRecipe();
