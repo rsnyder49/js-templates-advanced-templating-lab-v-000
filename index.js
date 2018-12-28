@@ -13,14 +13,14 @@ function createRecipe() {
   var recipeTemplate = document.getElementById("recipe-template").innerHTML;
   var template = Handlebars.compile(recipeTemplate);
   document.getElementById("main").innerHTML = template(recipe);
- }
+}
  
-  function updateRecipe() {
-   var recipe = recipeInfo();
-   var recipeTemplate = document.getElementById("recipe-template").innerHTML;
-   var template = Handlebars.compile(recipeTemplate);
-   document.getElementById("main").innerHTML = template(recipe);
- }
+function updateRecipe() {
+  var recipe = recipeInfo();
+  var recipeTemplate = document.getElementById("recipe-template").innerHTML;
+  var template = Handlebars.compile(recipeTemplate);
+  document.getElementById("main").innerHTML = template(recipe);
+}
  
 function displayEditForm() {
   var name = document.getElementById("recipeName").innerHTML;
@@ -34,12 +34,13 @@ function displayEditForm() {
   var recipe = {name, description, ingredients, handleSubmit: "createRecipe()"};
   var recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML;
   var template = Handlebars.compile(recipeFormTemplate);
-   document.getElementById("main").innerHTML = template(recipe);
+  document.getElementById("main").innerHTML = template(recipe);
 }
  
 function recipeInfo() {
   var ingredientList = document.getElementsByName("ingredients");
   var ingredients = [];
+  
   for(var i = 0;i < ingredientList.length; i++) {
     if(ingredientList[i].value !== "") {
        ingredients.push(ingredientList[i].value);
@@ -52,13 +53,12 @@ function recipeInfo() {
  }
  
 function handlebarsSetup() {
-  
   Handlebars.registerHelper('displayIngredient', function(ingredient) {
      return new Handlebars.SafeString('<li name="ingredients">' + ingredient + '</li>');
   });
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
- }
+}
  
 function init() {
   handlebarsSetup();
