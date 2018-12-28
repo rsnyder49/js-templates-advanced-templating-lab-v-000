@@ -56,6 +56,9 @@ function init() {
   setupHelpersPartials();
   initForm();
 }	 
- 
+
+document.addEventListener("DOMContentLoaded", function(event) {
+ init();
+});
  
  
