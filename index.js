@@ -1,18 +1,18 @@
 function initForm() {
-   var formTemplate = document.getElementById("recipe-form-template").innerHTML;
-   var template = Handlebars.compile(formTemplate);
-   document.getElementsByTagName("main")[0].innerHTML = template({'submitAction': 'handleSubmit()'});
+  var formTemplate = document.getElementById("recipe-form-template").innerHTML;
+  var template = Handlebars.compile(formTemplate);
+  document.getElementsByTagName("main")[0].innerHTML = template({'submitAction': 'handleSubmit()'});
 }
  
 function handleSubmit() {
-    createRecipe();
+ createRecipe();
 }
   
 function createRecipe() {
-   var recipe = recipeInfo();
-   var recipeTemplate = document.getElementById("recipe-template").innerHTML;
-   var template = Handlebars.compile(recipeTemplate);
-   document.getElementById("main").innerHTML = template(recipe);
+  var recipe = recipeInfo();
+  var recipeTemplate = document.getElementById("recipe-template").innerHTML;
+  var template = Handlebars.compile(recipeTemplate);
+  document.getElementById("main").innerHTML = template(recipe);
  }
  
   function updateRecipe() {
@@ -22,22 +22,20 @@ function createRecipe() {
    document.getElementById("main").innerHTML = template(recipe);
  }
  
-  function displayEditForm() {
-   var name = document.getElementById("recipeName").innerHTML;
-   var description = document.getElementById("recipeDescription").innerHTML;
-   var ingredientList = document.getElementsByName("ingredients");
-   var ingredients = [];
-   for(var i=0;i<ingredientList.length;i++) {
-     ingredients.push(ingredientList[i].innerHTML);
+function displayEditForm() {
+  var name = document.getElementById("recipeName").innerHTML;
+  var description = document.getElementById("recipeDescription").innerHTML;
+  var ingredientList = document.getElementsByName("ingredients");
+  var ingredients = [];
+  
+  for(var i=0;i<ingredientList.length;i++) {
+    ingredients.push(ingredientList[i].innerHTML);
    }
- 
-    // var newDescription = description + " " + name.toLowerCase();
-   var recipe = {name, description, ingredients, handleSubmit: "createRecipe()"};
- 
-    var recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML;
-   var template = Handlebars.compile(recipeFormTemplate);
+  var recipe = {name, description, ingredients, handleSubmit: "createRecipe()"};
+  var recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML;
+  var template = Handlebars.compile(recipeFormTemplate);
    document.getElementById("main").innerHTML = template(recipe);
- }
+}
  
   function recipeInfo() {
    var ingredientList = document.getElementsByName("ingredients");
