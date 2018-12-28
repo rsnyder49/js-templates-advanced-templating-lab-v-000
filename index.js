@@ -65,9 +65,9 @@ function init() {
   initForm();
 }	
 
- document.addEventListener("DOMContentLoaded", function(event) {
-   init()	   init();
- })	 });
+document.addEventListener("DOMContentLoaded", function(event) {
+  init();
+});
 
  
  
