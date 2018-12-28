@@ -38,7 +38,7 @@ function buildRecipe() {
   let ingredients = [];
  
   for (let i = 0; i < ingredientNodes.length; i++) {
-    if (ingredNodes[i].value !== "") {
+    if (ingredientNodes[i].value !== "") {
        ingredients.push(ingredientNodes[i].value);
     }
   }
