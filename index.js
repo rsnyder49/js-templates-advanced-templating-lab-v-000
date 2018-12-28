@@ -33,12 +33,12 @@ function displayEditForm() {
 function buildRecipe() {
   let name = document.getElementById("name").value;
   let description = document.getElementById("description").value;
-  let ingredientNodes = document.getElementsByName("ingredients");
+  let ingredNodes = document.getElementsByName("ingredients");
   let ingredients = [];
  
-  for (let i = 0; i < ingredientNodes.length; i++) {
-    if (ingredientNodes[i].value !== "") {
-      ingredients.push(ingredientNodes[i].value);
+  for (let i = 0; i < ingredNodes.length; i++) {
+    if (ingredNodes[i].value !== "") {
+      ingredients.push(ingredNodes[i].value);
     }
   }
   let recipe = { name, ingredients, description };
