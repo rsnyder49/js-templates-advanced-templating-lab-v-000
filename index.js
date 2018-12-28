@@ -51,6 +51,11 @@ function setupHelpersPartials() {
    });
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
 }
+
+function init() {
+  setupHelpersPartials();
+  initForm();
+}	 
  
  
  
