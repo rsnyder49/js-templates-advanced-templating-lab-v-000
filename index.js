@@ -44,7 +44,13 @@ function buildRecipe() {
   let recipe = { name, ingredients, description };
   return(recipe);
 }
- 
+
+function setupHelpersPartials() {
+  Handlebars.registerHelper('displayIngredient', function(ingredient) {
+     return new Handlebars.SafeString('<li name="ingredients">' + ingredient + '</li>');
+   });
+  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
+}
  
  
  
